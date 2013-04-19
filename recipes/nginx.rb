@@ -22,3 +22,7 @@ template "nginx.conf" do
   mode 0644
   notifies :reload, 'service[nginx]'
 end
+
+directory '/var/log/nginx' do
+  mode 0755
+end
